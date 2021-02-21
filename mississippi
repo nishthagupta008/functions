@@ -1,0 +1,12 @@
+import operator
+
+if __name__ == '__main__':
+
+    inputstring = 'Mississippi'
+
+    stringdict = dict()
+    for letter in inputstring:
+        if letter not in stringdict:
+            stringdict[letter] = inputstring.count(letter)
+    answer = sorted(stringdict.items(), key=operator.itemgetter(1), reverse=True)
+    print (answer)
